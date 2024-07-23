@@ -13,6 +13,8 @@
 			//Write your code here
 			if(arr.length==0 || arr.length==1 )
 				return ("-Infinity")
+			else{
+				
 			let c=1;
 			for(let i=0; i<arr.length-1;i++)
 				{
@@ -23,7 +25,8 @@
 				return ("-Infinity")
 			else if(c==1)
 			{
-				arr.sort()[arr.length-1]
+				return (arr.sort()[arr.length-1])
+			}
 			}
 		}
 
@@ -33,7 +36,7 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			/alert(secondHighest(arr));
 		}
 		Main();
 	</script>
