@@ -1,48 +1,48 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>	
-	<script>
-		function secondHighest(arr) {
-			
-			if(arr.length==0 || arr.length==1 )
-        return ("-Infinity")
-    else{
-        let c=1;
-        for(let i=0; i<arr.length-1;i++)
-        {
-            if(arr[i+1]==arr[i])
-                c++
-        }
-        if(c==arr.length)
-            return ('-Infinity')
-        else
-        {
-            return (arr.slice().sort((a, b) => b - a)[1])
-        }
-    }
-
-		}
-
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
+	<!DOCTYPE html>
+	
+	<html>
+	
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>	
+		<script>
+			function secondHighest(arr) {
+				
+				if(arr.length==0 || arr.length==1 )
+	        return -Infinity
+	    else{
+	        let c=1;
+	        for(let i=0; i<arr.length-1;i++)
+	        {
+	            if(arr[i+1]==arr[i])
+	                c++
+	        }
+	        if(c==arr.length)
+	            return -Infinity
+	        else
+	        {
+	            return (arr.slice().sort((a, b) => b - a)[1])
+	        }
+	    }
+	
 			}
-			alert(secondHighest(arr))
-		}
-		Main();
+	
+			function Main() {
+				var n = prompt("Enter the number of elements");
+				var arr = [];
+				for (var i = 0; i < n; i++) {
+					arr[i] = prompt("Enter element " + (i+1));
+				}
+				alert(secondHighest(arr))
+			}
+			Main();
+		</script>
+	
+	    <script type="text/javascript" src="./script.js">
 	</script>
-
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
-</html>
+	
+	</body>
+	
+	</html>
