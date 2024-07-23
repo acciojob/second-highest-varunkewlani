@@ -9,8 +9,22 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
 			
+			//Write your code here
+			if(arr.length==0 || arr.length==1 )
+				return ("-Infinity")
+			let c=1;
+			for(let i=0; i<arr.length-1;i++)
+				{
+					if(arr[i+1]==arr[i])
+						c++
+				}
+			if(c==arr.length)
+				return ("-Infinity")
+			else if(c==1)
+			{
+				arr.sort()[arr.length-1]
+			}
 		}
 
 		function Main() {
@@ -19,7 +33,7 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			/alert(secondHighest(arr));
 		}
 		Main();
 	</script>
